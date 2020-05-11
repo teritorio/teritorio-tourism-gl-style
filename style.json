@@ -15,7 +15,8 @@
     "mapbox:type": "template",
     "openmaptiles:mapbox:owner": "openmaptiles",
     "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t",
-    "openmaptiles:version": "3.x"
+    "openmaptiles:version": "3.x",
+    "maputnik:renderer": "mbgljs"
   },
   "center": [0, 0],
   "zoom": 1,
@@ -2793,8 +2794,8 @@
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
-        [">=", ["get", "rank"], 25],
-        ["<=", ["get", "zoom"], ["zoom"]],
+        [">=", ["get", "tourism_rank"], 25],
+        ["<=", ["get", "tourism_zoom"], ["zoom"]],
         ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]]
       ],
       "layout": {
@@ -2804,25 +2805,28 @@
             "image",
             [
               "concat",
-              ["get", "superclass"],
+              ["get", "tourism_superclass"],
               "-",
-              ["get", "class"],
+              ["get", "tourism_class"],
               "-",
-              ["get", "subclass"],
-              ["get", "style"]
+              ["get", "tourism_subclass"],
+              ["get", "tourism_style"]
             ]
           ],
           [
             "image",
             [
               "concat",
-              ["get", "superclass"],
+              ["get", "tourism_superclass"],
               "-",
-              ["get", "class"],
-              ["get", "style"]
+              ["get", "tourism_class"],
+              ["get", "tourism_style"]
             ]
           ],
-          ["image", ["concat", ["get", "superclass"], ["get", "style"]]]
+          [
+            "image",
+            ["concat", ["get", "tourism_superclass"], ["get", "tourism_style"]]
+          ]
         ]
       }
     },
@@ -2835,8 +2839,8 @@
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
-        [">=", ["get", "rank"], 25],
-        ["<=", ["get", "zoom"], ["zoom"]],
+        [">=", ["get", "tourism_rank"], 25],
+        ["<=", ["get", "tourism_zoom"], ["zoom"]],
         ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]]
       ],
       "layout": {
@@ -2846,25 +2850,28 @@
             "image",
             [
               "concat",
-              ["get", "superclass"],
+              ["get", "tourism_superclass"],
               "-",
-              ["get", "class"],
+              ["get", "tourism_class"],
               "-",
-              ["get", "subclass"],
-              ["get", "style"]
+              ["get", "tourism_subclass"],
+              ["get", "tourism_style"]
             ]
           ],
           [
             "image",
             [
               "concat",
-              ["get", "superclass"],
+              ["get", "tourism_superclass"],
               "-",
-              ["get", "class"],
-              ["get", "style"]
+              ["get", "tourism_class"],
+              ["get", "tourism_style"]
             ]
           ],
-          ["image", ["concat", ["get", "superclass"], ["get", "style"]]]
+          [
+            "image",
+            ["concat", ["get", "tourism_superclass"], ["get", "tourism_style"]]
+          ]
         ],
         "text-anchor": "top",
         "text-field": "{name:latin}\n{name:nonlatin}",
@@ -2879,12 +2886,12 @@
       "paint": {
         "text-color": [
           "match",
-          ["get", "style"],
+          ["get", "tourism_style"],
           "•",
           "#666",
           [
             "match",
-            ["get", "superclass"],
+            ["get", "tourism_superclass"],
             "products",
             "#F25C05",
             "convenience",
@@ -2928,9 +2935,9 @@
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
-        ["<=", ["get", "rank"], 24],
-        [">=", ["get", "rank"], 15],
-        ["<=", ["get", "zoom"], ["zoom"]],
+        ["<=", ["get", "tourism_rank"], 24],
+        [">=", ["get", "tourism_rank"], 15],
+        ["<=", ["get", "tourism_zoom"], ["zoom"]],
         ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]]
       ],
       "layout": {
@@ -2940,25 +2947,28 @@
             "image",
             [
               "concat",
-              ["get", "superclass"],
+              ["get", "tourism_superclass"],
               "-",
-              ["get", "class"],
+              ["get", "tourism_class"],
               "-",
-              ["get", "subclass"],
-              ["get", "style"]
+              ["get", "tourism_subclass"],
+              ["get", "tourism_style"]
             ]
           ],
           [
             "image",
             [
               "concat",
-              ["get", "superclass"],
+              ["get", "tourism_superclass"],
               "-",
-              ["get", "class"],
-              ["get", "style"]
+              ["get", "tourism_class"],
+              ["get", "tourism_style"]
             ]
           ],
-          ["image", ["concat", ["get", "superclass"], ["get", "style"]]]
+          [
+            "image",
+            ["concat", ["get", "tourism_superclass"], ["get", "tourism_style"]]
+          ]
         ]
       }
     },
@@ -2971,9 +2981,9 @@
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
-        ["<=", ["get", "rank"], 24],
-        [">=", ["get", "rank"], 15],
-        ["<=", ["get", "zoom"], ["zoom"]],
+        ["<=", ["get", "tourism_rank"], 24],
+        [">=", ["get", "tourism_rank"], 15],
+        ["<=", ["get", "tourism_zoom"], ["zoom"]],
         ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]]
       ],
       "layout": {
@@ -2983,25 +2993,28 @@
             "image",
             [
               "concat",
-              ["get", "superclass"],
+              ["get", "tourism_superclass"],
               "-",
-              ["get", "class"],
+              ["get", "tourism_class"],
               "-",
-              ["get", "subclass"],
-              ["get", "style"]
+              ["get", "tourism_subclass"],
+              ["get", "tourism_style"]
             ]
           ],
           [
             "image",
             [
               "concat",
-              ["get", "superclass"],
+              ["get", "tourism_superclass"],
               "-",
-              ["get", "class"],
-              ["get", "style"]
+              ["get", "tourism_class"],
+              ["get", "tourism_style"]
             ]
           ],
-          ["image", ["concat", ["get", "superclass"], ["get", "style"]]]
+          [
+            "image",
+            ["concat", ["get", "tourism_superclass"], ["get", "tourism_style"]]
+          ]
         ],
         "text-anchor": "top",
         "text-field": "{name:latin}\n{name:nonlatin}",
@@ -3015,12 +3028,12 @@
       "paint": {
         "text-color": [
           "match",
-          ["get", "style"],
+          ["get", "tourism_style"],
           "•",
           "#666",
           [
             "match",
-            ["get", "superclass"],
+            ["get", "tourism_superclass"],
             "products",
             "#F25C05",
             "convenience",
@@ -3064,8 +3077,8 @@
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
-        ["<=", ["get", "rank"], 14],
-        ["<=", ["get", "zoom"], ["zoom"]],
+        ["<=", ["get", "tourism_rank"], 14],
+        ["<=", ["get", "tourism_zoom"], ["zoom"]],
         ["has", "name"],
         ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]]
       ],
@@ -3076,25 +3089,28 @@
             "image",
             [
               "concat",
-              ["get", "superclass"],
+              ["get", "tourism_superclass"],
               "-",
-              ["get", "class"],
+              ["get", "tourism_class"],
               "-",
-              ["get", "subclass"],
-              ["get", "style"]
+              ["get", "tourism_subclass"],
+              ["get", "tourism_style"]
             ]
           ],
           [
             "image",
             [
               "concat",
-              ["get", "superclass"],
+              ["get", "tourism_superclass"],
               "-",
-              ["get", "class"],
-              ["get", "style"]
+              ["get", "tourism_class"],
+              ["get", "tourism_style"]
             ]
           ],
-          ["image", ["concat", ["get", "superclass"], ["get", "style"]]]
+          [
+            "image",
+            ["concat", ["get", "tourism_superclass"], ["get", "tourism_style"]]
+          ]
         ]
       }
     },
@@ -3107,8 +3123,8 @@
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
-        ["<=", ["get", "rank"], 14],
-        ["<=", ["get", "zoom"], ["zoom"]],
+        ["<=", ["get", "tourism_rank"], 14],
+        ["<=", ["get", "tourism_zoom"], ["zoom"]],
         ["has", "name"],
         ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]]
       ],
@@ -3119,25 +3135,28 @@
             "image",
             [
               "concat",
-              ["get", "superclass"],
+              ["get", "tourism_superclass"],
               "-",
-              ["get", "class"],
+              ["get", "tourism_class"],
               "-",
-              ["get", "subclass"],
-              ["get", "style"]
+              ["get", "tourism_subclass"],
+              ["get", "tourism_style"]
             ]
           ],
           [
             "image",
             [
               "concat",
-              ["get", "superclass"],
+              ["get", "tourism_superclass"],
               "-",
-              ["get", "class"],
-              ["get", "style"]
+              ["get", "tourism_class"],
+              ["get", "tourism_style"]
             ]
           ],
-          ["image", ["concat", ["get", "superclass"], ["get", "style"]]]
+          [
+            "image",
+            ["concat", ["get", "tourism_superclass"], ["get", "tourism_style"]]
+          ]
         ],
         "text-anchor": "top",
         "text-field": "{name:latin}\n{name:nonlatin}",
@@ -3151,12 +3170,12 @@
       "paint": {
         "text-color": [
           "match",
-          ["get", "style"],
+          ["get", "tourism_style"],
           "•",
           "#666",
           [
             "match",
-            ["get", "superclass"],
+            ["get", "tourism_superclass"],
             "products",
             "#F25C05",
             "convenience",
