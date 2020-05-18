@@ -3498,7 +3498,6 @@
         ["==", ["geometry-type"], "Point"],
         ["<=", ["get", "tourism_rank"], 14],
         ["<=", ["get", "tourism_zoom"], ["zoom"]],
-        ["has", "name"],
         ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]]
       ],
       "layout": {
@@ -3544,7 +3543,6 @@
         ["==", ["geometry-type"], "Point"],
         ["<=", ["get", "tourism_rank"], 14],
         ["<=", ["get", "tourism_zoom"], ["zoom"]],
-        ["has", "name"],
         ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]]
       ],
       "layout": {
