@@ -2966,32 +2966,37 @@
       ],
       "layout": {
         "icon-image": [
-          "coalesce",
+          "let",
+          "style",
+          ["get", "tourism_style"],
           [
-            "image",
+            "coalesce",
             [
-              "concat",
-              ["get", "tourism_superclass"],
-              "-",
-              ["get", "tourism_class"],
-              "-",
-              ["get", "tourism_subclass"],
-              ["get", "tourism_style"]
-            ]
-          ],
-          [
-            "image",
+              "image",
+              [
+                "concat",
+                ["get", "tourism_superclass"],
+                "-",
+                ["get", "tourism_class"],
+                "-",
+                ["get", "tourism_subclass"],
+                ["var", "style"]
+              ]
+            ],
             [
-              "concat",
-              ["get", "tourism_superclass"],
-              "-",
-              ["get", "tourism_class"],
-              ["get", "tourism_style"]
+              "image",
+              [
+                "concat",
+                ["get", "tourism_superclass"],
+                "-",
+                ["get", "tourism_class"],
+                ["var", "style"]
+              ]
+            ],
+            [
+              "image",
+              ["concat", ["get", "tourism_superclass"], ["var", "style"]]
             ]
-          ],
-          [
-            "image",
-            ["concat", ["get", "tourism_superclass"], ["get", "tourism_style"]]
           ]
         ]
       }
@@ -3011,32 +3016,37 @@
       ],
       "layout": {
         "icon-image": [
-          "coalesce",
+          "let",
+          "style",
+          ["get", "tourism_style"],
           [
-            "image",
+            "coalesce",
             [
-              "concat",
-              ["get", "tourism_superclass"],
-              "-",
-              ["get", "tourism_class"],
-              "-",
-              ["get", "tourism_subclass"],
-              ["get", "tourism_style"]
-            ]
-          ],
-          [
-            "image",
+              "image",
+              [
+                "concat",
+                ["get", "tourism_superclass"],
+                "-",
+                ["get", "tourism_class"],
+                "-",
+                ["get", "tourism_subclass"],
+                ["var", "style"]
+              ]
+            ],
             [
-              "concat",
-              ["get", "tourism_superclass"],
-              "-",
-              ["get", "tourism_class"],
-              ["get", "tourism_style"]
+              "image",
+              [
+                "concat",
+                ["get", "tourism_superclass"],
+                "-",
+                ["get", "tourism_class"],
+                ["var", "style"]
+              ]
+            ],
+            [
+              "image",
+              ["concat", ["get", "tourism_superclass"], ["var", "style"]]
             ]
-          ],
-          [
-            "image",
-            ["concat", ["get", "tourism_superclass"], ["get", "tourism_style"]]
           ]
         ],
         "text-anchor": "top",
@@ -3108,32 +3118,37 @@
       ],
       "layout": {
         "icon-image": [
-          "coalesce",
+          "let",
+          "style",
+          ["get", "tourism_style"],
           [
-            "image",
+            "coalesce",
             [
-              "concat",
-              ["get", "tourism_superclass"],
-              "-",
-              ["get", "tourism_class"],
-              "-",
-              ["get", "tourism_subclass"],
-              ["get", "tourism_style"]
-            ]
-          ],
-          [
-            "image",
+              "image",
+              [
+                "concat",
+                ["get", "tourism_superclass"],
+                "-",
+                ["get", "tourism_class"],
+                "-",
+                ["get", "tourism_subclass"],
+                ["var", "style"]
+              ]
+            ],
             [
-              "concat",
-              ["get", "tourism_superclass"],
-              "-",
-              ["get", "tourism_class"],
-              ["get", "tourism_style"]
+              "image",
+              [
+                "concat",
+                ["get", "tourism_superclass"],
+                "-",
+                ["get", "tourism_class"],
+                ["var", "style"]
+              ]
+            ],
+            [
+              "image",
+              ["concat", ["get", "tourism_superclass"], ["var", "style"]]
             ]
-          ],
-          [
-            "image",
-            ["concat", ["get", "tourism_superclass"], ["get", "tourism_style"]]
           ]
         ]
       }
@@ -3154,32 +3169,37 @@
       ],
       "layout": {
         "icon-image": [
-          "coalesce",
+          "let",
+          "style",
+          ["get", "tourism_style"],
           [
-            "image",
+            "coalesce",
             [
-              "concat",
-              ["get", "tourism_superclass"],
-              "-",
-              ["get", "tourism_class"],
-              "-",
-              ["get", "tourism_subclass"],
-              ["get", "tourism_style"]
-            ]
-          ],
-          [
-            "image",
+              "image",
+              [
+                "concat",
+                ["get", "tourism_superclass"],
+                "-",
+                ["get", "tourism_class"],
+                "-",
+                ["get", "tourism_subclass"],
+                ["var", "style"]
+              ]
+            ],
             [
-              "concat",
-              ["get", "tourism_superclass"],
-              "-",
-              ["get", "tourism_class"],
-              ["get", "tourism_style"]
+              "image",
+              [
+                "concat",
+                ["get", "tourism_superclass"],
+                "-",
+                ["get", "tourism_class"],
+                ["var", "style"]
+              ]
+            ],
+            [
+              "image",
+              ["concat", ["get", "tourism_superclass"], ["var", "style"]]
             ]
-          ],
-          [
-            "image",
-            ["concat", ["get", "tourism_superclass"], ["get", "tourism_style"]]
           ]
         ],
         "text-anchor": "top",
@@ -3249,32 +3269,37 @@
       ],
       "layout": {
         "icon-image": [
-          "coalesce",
+          "let",
+          "style",
+          ["get", "tourism_style"],
           [
-            "image",
+            "coalesce",
             [
-              "concat",
-              ["get", "tourism_superclass"],
-              "-",
-              ["get", "tourism_class"],
-              "-",
-              ["get", "tourism_subclass"],
-              ["get", "tourism_style"]
-            ]
-          ],
-          [
-            "image",
+              "image",
+              [
+                "concat",
+                ["get", "tourism_superclass"],
+                "-",
+                ["get", "tourism_class"],
+                "-",
+                ["get", "tourism_subclass"],
+                ["var", "style"]
+              ]
+            ],
             [
-              "concat",
-              ["get", "tourism_superclass"],
-              "-",
-              ["get", "tourism_class"],
-              ["get", "tourism_style"]
+              "image",
+              [
+                "concat",
+                ["get", "tourism_superclass"],
+                "-",
+                ["get", "tourism_class"],
+                ["var", "style"]
+              ]
+            ],
+            [
+              "image",
+              ["concat", ["get", "tourism_superclass"], ["var", "style"]]
             ]
-          ],
-          [
-            "image",
-            ["concat", ["get", "tourism_superclass"], ["get", "tourism_style"]]
           ]
         ]
       }
@@ -3294,32 +3319,37 @@
       ],
       "layout": {
         "icon-image": [
-          "coalesce",
+          "let",
+          "style",
+          ["get", "tourism_style"],
           [
-            "image",
+            "coalesce",
             [
-              "concat",
-              ["get", "tourism_superclass"],
-              "-",
-              ["get", "tourism_class"],
-              "-",
-              ["get", "tourism_subclass"],
-              ["get", "tourism_style"]
-            ]
-          ],
-          [
-            "image",
+              "image",
+              [
+                "concat",
+                ["get", "tourism_superclass"],
+                "-",
+                ["get", "tourism_class"],
+                "-",
+                ["get", "tourism_subclass"],
+                ["var", "style"]
+              ]
+            ],
             [
-              "concat",
-              ["get", "tourism_superclass"],
-              "-",
-              ["get", "tourism_class"],
-              ["get", "tourism_style"]
+              "image",
+              [
+                "concat",
+                ["get", "tourism_superclass"],
+                "-",
+                ["get", "tourism_class"],
+                ["var", "style"]
+              ]
+            ],
+            [
+              "image",
+              ["concat", ["get", "tourism_superclass"], ["var", "style"]]
             ]
-          ],
-          [
-            "image",
-            ["concat", ["get", "tourism_superclass"], ["get", "tourism_style"]]
           ]
         ],
         "text-anchor": "top",
