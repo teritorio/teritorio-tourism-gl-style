@@ -6266,7 +6266,7 @@
       "minzoom": 13,
       "filter": [
         "==",
-        "class",
+        "subclass",
         "cable_car"
       ],
       "layout": {
@@ -6298,7 +6298,7 @@
       "minzoom": 13,
       "filter": [
         "==",
-        "class",
+        "subclass",
         "cable_car"
       ],
       "layout": {
@@ -6684,7 +6684,7 @@
       "id": "poi-level-3-picto",
       "type": "symbol",
       "source": "openmaptiles",
-      "source-layer": "poi",
+      "source-layer": "poi_tourism",
       "minzoom": 15,
       "filter": [
         "all",
@@ -6755,71 +6755,46 @@
       ],
       "layout": {
         "icon-image": [
-          "let",
-          "style",
+          "concat",
+          [
+            "get",
+            "tourism_superclass"
+          ],
+          [
+            "case",
+            [
+              "has",
+              "tourism_class"
+            ],
+            [
+              "concat",
+              "-",
+              [
+                "get",
+                "tourism_class"
+              ]
+            ],
+            ""
+          ],
+          [
+            "case",
+            [
+              "has",
+              "tourism_subclass"
+            ],
+            [
+              "concat",
+              "-",
+              [
+                "get",
+                "tourism_subclass"
+              ]
+            ],
+            ""
+          ],
           [
             "get",
             "tourism_style"
-          ],
-          [
-            "coalesce",
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_class"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_subclass"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ],
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_class"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ],
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ]
           ]
         ],
         "text-anchor": "top",
@@ -6848,7 +6823,7 @@
       "id": "poi-level-2-picto",
       "type": "symbol",
       "source": "openmaptiles",
-      "source-layer": "poi",
+      "source-layer": "poi_tourism",
       "minzoom": 14,
       "filter": [
         "all",
@@ -6927,71 +6902,46 @@
       ],
       "layout": {
         "icon-image": [
-          "let",
-          "style",
+          "concat",
+          [
+            "get",
+            "tourism_superclass"
+          ],
+          [
+            "case",
+            [
+              "has",
+              "tourism_class"
+            ],
+            [
+              "concat",
+              "-",
+              [
+                "get",
+                "tourism_class"
+              ]
+            ],
+            ""
+          ],
+          [
+            "case",
+            [
+              "has",
+              "tourism_subclass"
+            ],
+            [
+              "concat",
+              "-",
+              [
+                "get",
+                "tourism_subclass"
+              ]
+            ],
+            ""
+          ],
           [
             "get",
             "tourism_style"
-          ],
-          [
-            "coalesce",
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_class"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_subclass"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ],
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_class"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ],
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ]
           ]
         ],
         "text-anchor": "top",
@@ -7019,7 +6969,7 @@
       "id": "poi-level-1-picto",
       "type": "symbol",
       "source": "openmaptiles",
-      "source-layer": "poi",
+      "source-layer": "poi_tourism",
       "minzoom": 12,
       "filter": [
         "all",
@@ -7090,71 +7040,46 @@
       ],
       "layout": {
         "icon-image": [
-          "let",
-          "style",
+          "concat",
+          [
+            "get",
+            "tourism_superclass"
+          ],
+          [
+            "case",
+            [
+              "has",
+              "tourism_class"
+            ],
+            [
+              "concat",
+              "-",
+              [
+                "get",
+                "tourism_class"
+              ]
+            ],
+            ""
+          ],
+          [
+            "case",
+            [
+              "has",
+              "tourism_subclass"
+            ],
+            [
+              "concat",
+              "-",
+              [
+                "get",
+                "tourism_subclass"
+              ]
+            ],
+            ""
+          ],
           [
             "get",
             "tourism_style"
-          ],
-          [
-            "coalesce",
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_class"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_subclass"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ],
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_class"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ],
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ]
           ]
         ],
         "text-anchor": "top",
@@ -7909,7 +7834,7 @@
       "id": "poi-level-3",
       "type": "symbol",
       "source": "openmaptiles",
-      "source-layer": "poi",
+      "source-layer": "poi_tourism",
       "minzoom": 15,
       "filter": [
         "all",
@@ -7980,71 +7905,46 @@
       ],
       "layout": {
         "icon-image": [
-          "let",
-          "style",
+          "concat",
+          [
+            "get",
+            "tourism_superclass"
+          ],
+          [
+            "case",
+            [
+              "has",
+              "tourism_class"
+            ],
+            [
+              "concat",
+              "-",
+              [
+                "get",
+                "tourism_class"
+              ]
+            ],
+            ""
+          ],
+          [
+            "case",
+            [
+              "has",
+              "tourism_subclass"
+            ],
+            [
+              "concat",
+              "-",
+              [
+                "get",
+                "tourism_subclass"
+              ]
+            ],
+            ""
+          ],
           [
             "get",
             "tourism_style"
-          ],
-          [
-            "coalesce",
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_class"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_subclass"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ],
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_class"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ],
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ]
           ]
         ],
         "text-anchor": "top",
@@ -8115,7 +8015,7 @@
       "id": "poi-level-2",
       "type": "symbol",
       "source": "openmaptiles",
-      "source-layer": "poi",
+      "source-layer": "poi_tourism",
       "minzoom": 14,
       "filter": [
         "all",
@@ -8194,71 +8094,46 @@
       ],
       "layout": {
         "icon-image": [
-          "let",
-          "style",
+          "concat",
+          [
+            "get",
+            "tourism_superclass"
+          ],
+          [
+            "case",
+            [
+              "has",
+              "tourism_class"
+            ],
+            [
+              "concat",
+              "-",
+              [
+                "get",
+                "tourism_class"
+              ]
+            ],
+            ""
+          ],
+          [
+            "case",
+            [
+              "has",
+              "tourism_subclass"
+            ],
+            [
+              "concat",
+              "-",
+              [
+                "get",
+                "tourism_subclass"
+              ]
+            ],
+            ""
+          ],
           [
             "get",
             "tourism_style"
-          ],
-          [
-            "coalesce",
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_class"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_subclass"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ],
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_class"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ],
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ]
           ]
         ],
         "text-anchor": "top",
@@ -8328,7 +8203,7 @@
       "id": "poi-level-1",
       "type": "symbol",
       "source": "openmaptiles",
-      "source-layer": "poi",
+      "source-layer": "poi_tourism",
       "minzoom": 12,
       "filter": [
         "all",
@@ -8399,71 +8274,46 @@
       ],
       "layout": {
         "icon-image": [
-          "let",
-          "style",
+          "concat",
+          [
+            "get",
+            "tourism_superclass"
+          ],
+          [
+            "case",
+            [
+              "has",
+              "tourism_class"
+            ],
+            [
+              "concat",
+              "-",
+              [
+                "get",
+                "tourism_class"
+              ]
+            ],
+            ""
+          ],
+          [
+            "case",
+            [
+              "has",
+              "tourism_subclass"
+            ],
+            [
+              "concat",
+              "-",
+              [
+                "get",
+                "tourism_subclass"
+              ]
+            ],
+            ""
+          ],
           [
             "get",
             "tourism_style"
-          ],
-          [
-            "coalesce",
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_class"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_subclass"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ],
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                "-",
-                [
-                  "get",
-                  "tourism_class"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ],
-            [
-              "image",
-              [
-                "concat",
-                [
-                  "get",
-                  "tourism_superclass"
-                ],
-                [
-                  "var",
-                  "style"
-                ]
-              ]
-            ]
           ]
         ],
         "text-anchor": "top",
