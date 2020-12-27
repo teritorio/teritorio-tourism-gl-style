@@ -6699,7 +6699,7 @@
           ">=",
           [
             "get",
-            "tourism_rank"
+            "rank"
           ],
           25
         ],
@@ -6707,7 +6707,7 @@
           "<=",
           [
             "get",
-            "tourism_zoom"
+            "zoom"
           ],
           [
             "zoom"
@@ -6740,7 +6740,7 @@
             "style",
             [
               "get",
-              "tourism_style"
+              "style"
             ],
             [
               "==",
@@ -6758,20 +6758,20 @@
           "concat",
           [
             "get",
-            "tourism_superclass"
+            "superclass"
           ],
           [
             "case",
             [
               "has",
-              "tourism_class"
+              "class"
             ],
             [
               "concat",
               "-",
               [
                 "get",
-                "tourism_class"
+                "class"
               ]
             ],
             ""
@@ -6780,21 +6780,21 @@
             "case",
             [
               "has",
-              "tourism_subclass"
+              "subclass"
             ],
             [
               "concat",
               "-",
               [
                 "get",
-                "tourism_subclass"
+                "subclass"
               ]
             ],
             ""
           ],
           [
             "get",
-            "tourism_style"
+            "style"
           ]
         ],
         "text-anchor": "top",
@@ -6838,7 +6838,7 @@
           "<=",
           [
             "get",
-            "tourism_rank"
+            "rank"
           ],
           24
         ],
@@ -6846,7 +6846,7 @@
           ">=",
           [
             "get",
-            "tourism_rank"
+            "rank"
           ],
           15
         ],
@@ -6854,7 +6854,7 @@
           "<=",
           [
             "get",
-            "tourism_zoom"
+            "zoom"
           ],
           [
             "zoom"
@@ -6887,7 +6887,7 @@
             "style",
             [
               "get",
-              "tourism_style"
+              "style"
             ],
             [
               "==",
@@ -6905,20 +6905,20 @@
           "concat",
           [
             "get",
-            "tourism_superclass"
+            "superclass"
           ],
           [
             "case",
             [
               "has",
-              "tourism_class"
+              "class"
             ],
             [
               "concat",
               "-",
               [
                 "get",
-                "tourism_class"
+                "class"
               ]
             ],
             ""
@@ -6927,21 +6927,21 @@
             "case",
             [
               "has",
-              "tourism_subclass"
+              "subclass"
             ],
             [
               "concat",
               "-",
               [
                 "get",
-                "tourism_subclass"
+                "subclass"
               ]
             ],
             ""
           ],
           [
             "get",
-            "tourism_style"
+            "style"
           ]
         ],
         "text-anchor": "top",
@@ -6984,7 +6984,7 @@
           "<=",
           [
             "get",
-            "tourism_rank"
+            "rank"
           ],
           14
         ],
@@ -6992,7 +6992,7 @@
           "<=",
           [
             "get",
-            "tourism_zoom"
+            "zoom"
           ],
           [
             "zoom"
@@ -7025,7 +7025,7 @@
             "style",
             [
               "get",
-              "tourism_style"
+              "style"
             ],
             [
               "==",
@@ -7043,20 +7043,20 @@
           "concat",
           [
             "get",
-            "tourism_superclass"
+            "superclass"
           ],
           [
             "case",
             [
               "has",
-              "tourism_class"
+              "class"
             ],
             [
               "concat",
               "-",
               [
                 "get",
-                "tourism_class"
+                "class"
               ]
             ],
             ""
@@ -7065,21 +7065,21 @@
             "case",
             [
               "has",
-              "tourism_subclass"
+              "subclass"
             ],
             [
               "concat",
               "-",
               [
                 "get",
-                "tourism_subclass"
+                "subclass"
               ]
             ],
             ""
           ],
           [
             "get",
-            "tourism_style"
+            "style"
           ]
         ],
         "text-anchor": "top",
@@ -7849,7 +7849,7 @@
           ">=",
           [
             "get",
-            "tourism_rank"
+            "rank"
           ],
           25
         ],
@@ -7857,7 +7857,7 @@
           "<=",
           [
             "get",
-            "tourism_zoom"
+            "zoom"
           ],
           [
             "zoom"
@@ -7890,7 +7890,7 @@
             "style",
             [
               "get",
-              "tourism_style"
+              "style"
             ],
             [
               "!=",
@@ -7908,20 +7908,20 @@
           "concat",
           [
             "get",
-            "tourism_superclass"
+            "superclass"
           ],
           [
             "case",
             [
               "has",
-              "tourism_class"
+              "class"
             ],
             [
               "concat",
               "-",
               [
                 "get",
-                "tourism_class"
+                "class"
               ]
             ],
             ""
@@ -7930,21 +7930,21 @@
             "case",
             [
               "has",
-              "tourism_subclass"
+              "subclass"
             ],
             [
               "concat",
               "-",
               [
                 "get",
-                "tourism_subclass"
+                "subclass"
               ]
             ],
             ""
           ],
           [
             "get",
-            "tourism_style"
+            "style"
           ]
         ],
         "text-anchor": "top",
@@ -7967,7 +7967,7 @@
           "match",
           [
             "get",
-            "tourism_style"
+            "style"
           ],
           "•",
           "#666",
@@ -7975,7 +7975,7 @@
             "match",
             [
               "get",
-              "tourism_superclass"
+              "superclass"
             ],
             "products",
             "#F25C05",
@@ -8030,7 +8030,7 @@
           "<=",
           [
             "get",
-            "tourism_rank"
+            "rank"
           ],
           24
         ],
@@ -8038,7 +8038,7 @@
           ">=",
           [
             "get",
-            "tourism_rank"
+            "rank"
           ],
           15
         ],
@@ -8046,7 +8046,7 @@
           "<=",
           [
             "get",
-            "tourism_zoom"
+            "zoom"
           ],
           [
             "zoom"
@@ -8079,7 +8079,7 @@
             "style",
             [
               "get",
-              "tourism_style"
+              "style"
             ],
             [
               "!=",
@@ -8097,20 +8097,20 @@
           "concat",
           [
             "get",
-            "tourism_superclass"
+            "superclass"
           ],
           [
             "case",
             [
               "has",
-              "tourism_class"
+              "class"
             ],
             [
               "concat",
               "-",
               [
                 "get",
-                "tourism_class"
+                "class"
               ]
             ],
             ""
@@ -8119,21 +8119,21 @@
             "case",
             [
               "has",
-              "tourism_subclass"
+              "subclass"
             ],
             [
               "concat",
               "-",
               [
                 "get",
-                "tourism_subclass"
+                "subclass"
               ]
             ],
             ""
           ],
           [
             "get",
-            "tourism_style"
+            "style"
           ]
         ],
         "text-anchor": "top",
@@ -8155,7 +8155,7 @@
           "match",
           [
             "get",
-            "tourism_style"
+            "style"
           ],
           "•",
           "#666",
@@ -8163,7 +8163,7 @@
             "match",
             [
               "get",
-              "tourism_superclass"
+              "superclass"
             ],
             "products",
             "#F25C05",
@@ -8218,7 +8218,7 @@
           "<=",
           [
             "get",
-            "tourism_rank"
+            "rank"
           ],
           14
         ],
@@ -8226,7 +8226,7 @@
           "<=",
           [
             "get",
-            "tourism_zoom"
+            "zoom"
           ],
           [
             "zoom"
@@ -8259,7 +8259,7 @@
             "style",
             [
               "get",
-              "tourism_style"
+              "style"
             ],
             [
               "!=",
@@ -8277,20 +8277,20 @@
           "concat",
           [
             "get",
-            "tourism_superclass"
+            "superclass"
           ],
           [
             "case",
             [
               "has",
-              "tourism_class"
+              "class"
             ],
             [
               "concat",
               "-",
               [
                 "get",
-                "tourism_class"
+                "class"
               ]
             ],
             ""
@@ -8299,21 +8299,21 @@
             "case",
             [
               "has",
-              "tourism_subclass"
+              "subclass"
             ],
             [
               "concat",
               "-",
               [
                 "get",
-                "tourism_subclass"
+                "subclass"
               ]
             ],
             ""
           ],
           [
             "get",
-            "tourism_style"
+            "style"
           ]
         ],
         "text-anchor": "top",
@@ -8335,7 +8335,7 @@
           "match",
           [
             "get",
-            "tourism_style"
+            "style"
           ],
           "•",
           "#666",
@@ -8343,7 +8343,7 @@
             "match",
             [
               "get",
-              "tourism_superclass"
+              "superclass"
             ],
             "products",
             "#F25C05",
