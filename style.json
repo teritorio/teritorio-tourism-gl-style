@@ -2682,38 +2682,28 @@
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
-        [">=", ["get", "tourism_rank"], 25],
-        ["<=", ["get", "tourism_zoom"], ["zoom"]],
+        [">=", ["get", "rank"], 25],
+        ["<=", ["get", "zoom"], ["zoom"]],
         ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]],
         [
           "let",
           "_bloc_name",
           "styleFilter",
-          [
-            "let",
-            "style",
-            ["get", "tourism_style"],
-            ["==", ["var", "style"], "•"]
-          ]
+          ["let", "style", ["get", "style"], ["==", ["var", "style"], "•"]]
         ]
       ],
       "layout": {
         "icon-image": [
           "concat",
-          ["get", "tourism_superclass"],
+          ["get", "superclass"],
+          ["case", ["has", "class"], ["concat", "-", ["get", "class"]], ""],
           [
             "case",
-            ["has", "tourism_class"],
-            ["concat", "-", ["get", "tourism_class"]],
+            ["has", "subclass"],
+            ["concat", "-", ["get", "subclass"]],
             ""
           ],
-          [
-            "case",
-            ["has", "tourism_subclass"],
-            ["concat", "-", ["get", "tourism_subclass"]],
-            ""
-          ],
-          ["get", "tourism_style"]
+          ["get", "style"]
         ],
         "text-anchor": "top",
         "text-field": "{name:latin}\n{name:nonlatin}",
@@ -2741,39 +2731,29 @@
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
-        ["<=", ["get", "tourism_rank"], 24],
-        [">=", ["get", "tourism_rank"], 15],
-        ["<=", ["get", "tourism_zoom"], ["zoom"]],
+        ["<=", ["get", "rank"], 24],
+        [">=", ["get", "rank"], 15],
+        ["<=", ["get", "zoom"], ["zoom"]],
         ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]],
         [
           "let",
           "_bloc_name",
           "styleFilter",
-          [
-            "let",
-            "style",
-            ["get", "tourism_style"],
-            ["==", ["var", "style"], "•"]
-          ]
+          ["let", "style", ["get", "style"], ["==", ["var", "style"], "•"]]
         ]
       ],
       "layout": {
         "icon-image": [
           "concat",
-          ["get", "tourism_superclass"],
+          ["get", "superclass"],
+          ["case", ["has", "class"], ["concat", "-", ["get", "class"]], ""],
           [
             "case",
-            ["has", "tourism_class"],
-            ["concat", "-", ["get", "tourism_class"]],
+            ["has", "subclass"],
+            ["concat", "-", ["get", "subclass"]],
             ""
           ],
-          [
-            "case",
-            ["has", "tourism_subclass"],
-            ["concat", "-", ["get", "tourism_subclass"]],
-            ""
-          ],
-          ["get", "tourism_style"]
+          ["get", "style"]
         ],
         "text-anchor": "top",
         "text-field": "{name:latin}\n{name:nonlatin}",
@@ -2800,38 +2780,28 @@
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
-        ["<=", ["get", "tourism_rank"], 14],
-        ["<=", ["get", "tourism_zoom"], ["zoom"]],
+        ["<=", ["get", "rank"], 14],
+        ["<=", ["get", "zoom"], ["zoom"]],
         ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]],
         [
           "let",
           "_bloc_name",
           "styleFilter",
-          [
-            "let",
-            "style",
-            ["get", "tourism_style"],
-            ["==", ["var", "style"], "•"]
-          ]
+          ["let", "style", ["get", "style"], ["==", ["var", "style"], "•"]]
         ]
       ],
       "layout": {
         "icon-image": [
           "concat",
-          ["get", "tourism_superclass"],
+          ["get", "superclass"],
+          ["case", ["has", "class"], ["concat", "-", ["get", "class"]], ""],
           [
             "case",
-            ["has", "tourism_class"],
-            ["concat", "-", ["get", "tourism_class"]],
+            ["has", "subclass"],
+            ["concat", "-", ["get", "subclass"]],
             ""
           ],
-          [
-            "case",
-            ["has", "tourism_subclass"],
-            ["concat", "-", ["get", "tourism_subclass"]],
-            ""
-          ],
-          ["get", "tourism_style"]
+          ["get", "style"]
         ],
         "text-anchor": "top",
         "text-field": "{name:latin}\n{name:nonlatin}",
@@ -3250,38 +3220,28 @@
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
-        [">=", ["get", "tourism_rank"], 25],
-        ["<=", ["get", "tourism_zoom"], ["zoom"]],
+        [">=", ["get", "rank"], 25],
+        ["<=", ["get", "zoom"], ["zoom"]],
         ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]],
         [
           "let",
           "_bloc_name",
           "styleFilter",
-          [
-            "let",
-            "style",
-            ["get", "tourism_style"],
-            ["!=", ["var", "style"], "•"]
-          ]
+          ["let", "style", ["get", "style"], ["!=", ["var", "style"], "•"]]
         ]
       ],
       "layout": {
         "icon-image": [
           "concat",
-          ["get", "tourism_superclass"],
+          ["get", "superclass"],
+          ["case", ["has", "class"], ["concat", "-", ["get", "class"]], ""],
           [
             "case",
-            ["has", "tourism_class"],
-            ["concat", "-", ["get", "tourism_class"]],
+            ["has", "subclass"],
+            ["concat", "-", ["get", "subclass"]],
             ""
           ],
-          [
-            "case",
-            ["has", "tourism_subclass"],
-            ["concat", "-", ["get", "tourism_subclass"]],
-            ""
-          ],
-          ["get", "tourism_style"]
+          ["get", "style"]
         ],
         "text-anchor": "top",
         "text-field": "{name:latin}\n{name:nonlatin}",
@@ -3296,12 +3256,12 @@
       "paint": {
         "text-color": [
           "match",
-          ["get", "tourism_style"],
+          ["get", "style"],
           "•",
           "#666",
           [
             "match",
-            ["get", "tourism_superclass"],
+            ["get", "superclass"],
             "products",
             "#F25C05",
             "convenience",
@@ -3345,39 +3305,29 @@
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
-        ["<=", ["get", "tourism_rank"], 24],
-        [">=", ["get", "tourism_rank"], 15],
-        ["<=", ["get", "tourism_zoom"], ["zoom"]],
+        ["<=", ["get", "rank"], 24],
+        [">=", ["get", "rank"], 15],
+        ["<=", ["get", "zoom"], ["zoom"]],
         ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]],
         [
           "let",
           "_bloc_name",
           "styleFilter",
-          [
-            "let",
-            "style",
-            ["get", "tourism_style"],
-            ["!=", ["var", "style"], "•"]
-          ]
+          ["let", "style", ["get", "style"], ["!=", ["var", "style"], "•"]]
         ]
       ],
       "layout": {
         "icon-image": [
           "concat",
-          ["get", "tourism_superclass"],
+          ["get", "superclass"],
+          ["case", ["has", "class"], ["concat", "-", ["get", "class"]], ""],
           [
             "case",
-            ["has", "tourism_class"],
-            ["concat", "-", ["get", "tourism_class"]],
+            ["has", "subclass"],
+            ["concat", "-", ["get", "subclass"]],
             ""
           ],
-          [
-            "case",
-            ["has", "tourism_subclass"],
-            ["concat", "-", ["get", "tourism_subclass"]],
-            ""
-          ],
-          ["get", "tourism_style"]
+          ["get", "style"]
         ],
         "text-anchor": "top",
         "text-field": "{name:latin}\n{name:nonlatin}",
@@ -3391,12 +3341,12 @@
       "paint": {
         "text-color": [
           "match",
-          ["get", "tourism_style"],
+          ["get", "style"],
           "•",
           "#666",
           [
             "match",
-            ["get", "tourism_superclass"],
+            ["get", "superclass"],
             "products",
             "#F25C05",
             "convenience",
@@ -3440,38 +3390,28 @@
       "filter": [
         "all",
         ["==", ["geometry-type"], "Point"],
-        ["<=", ["get", "tourism_rank"], 14],
-        ["<=", ["get", "tourism_zoom"], ["zoom"]],
+        ["<=", ["get", "rank"], 14],
+        ["<=", ["get", "zoom"], ["zoom"]],
         ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]],
         [
           "let",
           "_bloc_name",
           "styleFilter",
-          [
-            "let",
-            "style",
-            ["get", "tourism_style"],
-            ["!=", ["var", "style"], "•"]
-          ]
+          ["let", "style", ["get", "style"], ["!=", ["var", "style"], "•"]]
         ]
       ],
       "layout": {
         "icon-image": [
           "concat",
-          ["get", "tourism_superclass"],
+          ["get", "superclass"],
+          ["case", ["has", "class"], ["concat", "-", ["get", "class"]], ""],
           [
             "case",
-            ["has", "tourism_class"],
-            ["concat", "-", ["get", "tourism_class"]],
+            ["has", "subclass"],
+            ["concat", "-", ["get", "subclass"]],
             ""
           ],
-          [
-            "case",
-            ["has", "tourism_subclass"],
-            ["concat", "-", ["get", "tourism_subclass"]],
-            ""
-          ],
-          ["get", "tourism_style"]
+          ["get", "style"]
         ],
         "text-anchor": "top",
         "text-field": "{name:latin}\n{name:nonlatin}",
@@ -3485,12 +3425,12 @@
       "paint": {
         "text-color": [
           "match",
-          ["get", "tourism_style"],
+          ["get", "style"],
           "•",
           "#666",
           [
             "match",
-            ["get", "tourism_superclass"],
+            ["get", "superclass"],
             "products",
             "#F25C05",
             "convenience",
