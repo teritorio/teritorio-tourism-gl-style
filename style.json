@@ -2668,7 +2668,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "transportation",
-      "minzoom": 15,
+      "minzoom": 14,
       "filter": [
         "all",
         ["==", "oneway", 1],
@@ -2700,7 +2700,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "transportation",
-      "minzoom": 15,
+      "minzoom": 14,
       "filter": [
         "all",
         ["==", "oneway", -1],
@@ -2732,7 +2732,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "transportation_name",
-      "minzoom": 15.5,
+      "minzoom": 14,
       "filter": [
         "all",
         ["==", "class", "path"],
@@ -2756,7 +2756,7 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "transportation_name",
-      "minzoom": 15,
+      "minzoom": 14,
       "filter": [
         "all",
         ["==", "$type", "LineString"],
@@ -2907,7 +2907,7 @@
       "metadata": {"mapbox:group": "1444849242106.713"},
       "source": "openmaptiles",
       "source-layer": "place",
-      "minzoom": 16,
+      "minzoom": 14,
       "filter": ["all", ["in", "class", "square"]],
       "layout": {
         "text-field": "{name:latin}\n{name:nonlatin}",
