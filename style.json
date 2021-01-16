@@ -248,15 +248,6 @@
       "paint": {"fill-color": "rgba(207, 242, 190, 0.7)"}
     },
     {
-      "id": "alti",
-      "type": "hillshade",
-      "source": "alti",
-      "paint": {
-        "hillshade-accent-color": "rgba(122, 110, 103, 1)",
-        "hillshade-shadow-color": "rgba(176, 145, 91, 1)"
-      }
-    },
-    {
       "id": "water-offset",
       "type": "fill",
       "metadata": {"mapbox:group": "1444849382550.77"},
@@ -291,8 +282,7 @@
       "paint": {
         "fill-color": {
           "stops": [[8, "#94c1e1"], [10, "rgba(211, 220, 237, 1)"]]
-        },
-        "fill-opacity": {"stops": [[9, 0], [11, 0.5]]}
+        }
       }
     },
     {
@@ -2674,149 +2664,6 @@
       }
     },
     {
-      "id": "poi-level-3-picto",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "poi_tourism",
-      "minzoom": 15,
-      "filter": [
-        "all",
-        [">=", ["get", "rank"], 25],
-        ["<=", ["get", "zoom"], ["zoom"]],
-        ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]],
-        [
-          "let",
-          "_bloc_name",
-          "styleFilter",
-          ["let", "style", ["get", "style"], ["==", ["var", "style"], "•"]]
-        ]
-      ],
-      "layout": {
-        "icon-image": [
-          "concat",
-          ["get", "superclass"],
-          ["case", ["has", "class"], ["concat", "-", ["get", "class"]], ""],
-          [
-            "case",
-            ["has", "subclass"],
-            ["concat", "-", ["get", "subclass"]],
-            ""
-          ],
-          ["get", "style"]
-        ],
-        "text-anchor": "top",
-        "text-field": "{name:latin}\n{name:nonlatin}",
-        "text-font": ["Noto Sans Regular"],
-        "text-max-width": 9,
-        "text-offset": [0, 1],
-        "text-padding": 2,
-        "text-size": 12,
-        "text-optional": true,
-        "text-allow-overlap": false
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-blur": 0.5,
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 1
-      }
-    },
-    {
-      "id": "poi-level-2-picto",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "poi_tourism",
-      "minzoom": 14,
-      "filter": [
-        "all",
-        ["<=", ["get", "rank"], 24],
-        [">=", ["get", "rank"], 15],
-        ["<=", ["get", "zoom"], ["zoom"]],
-        ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]],
-        [
-          "let",
-          "_bloc_name",
-          "styleFilter",
-          ["let", "style", ["get", "style"], ["==", ["var", "style"], "•"]]
-        ]
-      ],
-      "layout": {
-        "icon-image": [
-          "concat",
-          ["get", "superclass"],
-          ["case", ["has", "class"], ["concat", "-", ["get", "class"]], ""],
-          [
-            "case",
-            ["has", "subclass"],
-            ["concat", "-", ["get", "subclass"]],
-            ""
-          ],
-          ["get", "style"]
-        ],
-        "text-anchor": "top",
-        "text-field": "{name:latin}\n{name:nonlatin}",
-        "text-font": ["Noto Sans Regular"],
-        "text-max-width": 9,
-        "text-offset": [0, 1],
-        "text-padding": 2,
-        "text-size": 12,
-        "text-optional": true
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-blur": 0.5,
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 1
-      }
-    },
-    {
-      "id": "poi-level-1-picto",
-      "type": "symbol",
-      "source": "openmaptiles",
-      "source-layer": "poi_tourism",
-      "minzoom": 12,
-      "filter": [
-        "all",
-        ["<=", ["get", "rank"], 14],
-        ["<=", ["get", "zoom"], ["zoom"]],
-        ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]],
-        [
-          "let",
-          "_bloc_name",
-          "styleFilter",
-          ["let", "style", ["get", "style"], ["==", ["var", "style"], "•"]]
-        ]
-      ],
-      "layout": {
-        "icon-image": [
-          "concat",
-          ["get", "superclass"],
-          ["case", ["has", "class"], ["concat", "-", ["get", "class"]], ""],
-          [
-            "case",
-            ["has", "subclass"],
-            ["concat", "-", ["get", "subclass"]],
-            ""
-          ],
-          ["get", "style"]
-        ],
-        "text-anchor": "top",
-        "text-field": "{name:latin}\n{name:nonlatin}",
-        "text-font": ["Noto Sans Regular"],
-        "text-max-width": 9,
-        "text-offset": [0, 1],
-        "text-padding": 2,
-        "text-size": 12,
-        "text-optional": true
-      },
-      "paint": {
-        "text-color": "#666",
-        "text-halo-blur": 0.5,
-        "text-halo-color": "#ffffff",
-        "text-halo-width": 1
-      }
-    },
-    {
       "id": "road_oneway",
       "type": "symbol",
       "source": "openmaptiles",
@@ -3032,26 +2879,6 @@
       "paint": {"text-color": "rgba(0, 0, 0, 1)"}
     },
     {
-      "id": "building-3d",
-      "type": "fill-extrusion",
-      "source": "openmaptiles",
-      "source-layer": "building",
-      "filter": ["all", ["!has", "hide_3d"]],
-      "layout": {"visibility": "none"},
-      "paint": {
-        "fill-extrusion-color": "#f2eae2",
-        "fill-extrusion-height": {
-          "property": "render_height",
-          "type": "identity"
-        },
-        "fill-extrusion-base": {
-          "property": "render_min_height",
-          "type": "identity"
-        },
-        "fill-extrusion-opacity": 0.6
-      }
-    },
-    {
       "id": "place-locality",
       "type": "symbol",
       "metadata": {"mapbox:group": "1444849242106.713"},
@@ -3181,15 +3008,6 @@
       "source": "openmaptiles",
       "source-layer": "mountain_peak",
       "minzoom": 9,
-      "filter": [
-        "all",
-        ["==", ["geometry-type"], "Point"],
-        [
-          "<=",
-          ["get", "rank"],
-          ["interpolate", ["linear"], ["zoom"], 7, 1, 14, 1, 15, 999]
-        ]
-      ],
       "layout": {
         "icon-image": "peak",
         "text-anchor": "top",
@@ -3213,32 +3031,12 @@
       "type": "symbol",
       "source": "openmaptiles",
       "source-layer": "poi_tourism",
-      "minzoom": 15,
+      "minzoom": 14,
       "filter": [
-        "all",
-        [">=", ["get", "rank"], 25],
-        ["<=", ["get", "zoom"], ["zoom"]],
-        ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]],
-        [
-          "let",
-          "_bloc_name",
-          "styleFilter",
-          ["let", "style", ["get", "style"], ["!=", ["var", "style"], "•"]]
-        ]
+        "all", [">=", ["get", "rank"], 25]
       ],
       "layout": {
-        "icon-image": [
-          "concat",
-          ["get", "superclass"],
-          ["case", ["has", "class"], ["concat", "-", ["get", "class"]], ""],
-          [
-            "case",
-            ["has", "subclass"],
-            ["concat", "-", ["get", "subclass"]],
-            ""
-          ],
-          ["get", "style"]
-        ],
+        "icon-image": "amenity⬤",
         "text-anchor": "top",
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Noto Sans Regular"],
@@ -3250,50 +3048,7 @@
         "text-allow-overlap": false
       },
       "paint": {
-        "text-color": [
-          "let",
-          "style",
-          ["get", "style"],
-          "superclass",
-          ["get", "superclass"],
-          [
-            "match",
-            ["var", "style"],
-            "•",
-            "#666",
-            [
-              "match",
-              ["var", "superclass"],
-              "amenity",
-              "#2a62ac",
-              "catering",
-              "#f09007",
-              "culture",
-              "#76009e",
-              "hosting",
-              "#99163a",
-              "leisure",
-              "#00a757",
-              "local_shop",
-              "#00a0c4",
-              "mobility",
-              "#3b74b9",
-              "products",
-              "#f25c05",
-              "public_landmark",
-              "#1d1d1b",
-              "remarkable",
-              "#e50980",
-              "safety",
-              "#e42224",
-              "services",
-              "#2a62ac",
-              "shopping",
-              "#808080",
-              "#666"
-            ]
-          ]
-        ],
+        "text-color": "#666",
         "text-halo-blur": 0.5,
         "text-halo-color": "#ffffff",
         "text-halo-width": 1
@@ -3308,29 +3063,10 @@
       "filter": [
         "all",
         ["<=", ["get", "rank"], 24],
-        [">=", ["get", "rank"], 15],
-        ["<=", ["get", "zoom"], ["zoom"]],
-        ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]],
-        [
-          "let",
-          "_bloc_name",
-          "styleFilter",
-          ["let", "style", ["get", "style"], ["!=", ["var", "style"], "•"]]
-        ]
+        [">=", ["get", "rank"], 15]
       ],
       "layout": {
-        "icon-image": [
-          "concat",
-          ["get", "superclass"],
-          ["case", ["has", "class"], ["concat", "-", ["get", "class"]], ""],
-          [
-            "case",
-            ["has", "subclass"],
-            ["concat", "-", ["get", "subclass"]],
-            ""
-          ],
-          ["get", "style"]
-        ],
+        "icon-image": "amenity⬤",
         "text-anchor": "top",
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Noto Sans Regular"],
@@ -3341,50 +3077,7 @@
         "text-optional": true
       },
       "paint": {
-        "text-color": [
-          "let",
-          "style",
-          ["get", "style"],
-          "superclass",
-          ["get", "superclass"],
-          [
-            "match",
-            ["var", "style"],
-            "•",
-            "#666",
-            [
-              "match",
-              ["var", "superclass"],
-              "amenity",
-              "#2a62ac",
-              "catering",
-              "#f09007",
-              "culture",
-              "#76009e",
-              "hosting",
-              "#99163a",
-              "leisure",
-              "#00a757",
-              "local_shop",
-              "#00a0c4",
-              "mobility",
-              "#3b74b9",
-              "products",
-              "#f25c05",
-              "public_landmark",
-              "#1d1d1b",
-              "remarkable",
-              "#e50980",
-              "safety",
-              "#e42224",
-              "services",
-              "#2a62ac",
-              "shopping",
-              "#808080",
-              "#666"
-            ]
-          ]
-        ],
+        "text-color": "#666",
         "text-halo-blur": 0.5,
         "text-halo-color": "#ffffff",
         "text-halo-width": 1
@@ -3396,31 +3089,9 @@
       "source": "openmaptiles",
       "source-layer": "poi_tourism",
       "minzoom": 12,
-      "filter": [
-        "all",
-        ["<=", ["get", "rank"], 14],
-        ["<=", ["get", "zoom"], ["zoom"]],
-        ["any", ["!", ["has", "level"]], ["==", ["get", "level"], 0]],
-        [
-          "let",
-          "_bloc_name",
-          "styleFilter",
-          ["let", "style", ["get", "style"], ["!=", ["var", "style"], "•"]]
-        ]
-      ],
+      "filter": ["all", ["<=", ["get", "rank"], 14]],
       "layout": {
-        "icon-image": [
-          "concat",
-          ["get", "superclass"],
-          ["case", ["has", "class"], ["concat", "-", ["get", "class"]], ""],
-          [
-            "case",
-            ["has", "subclass"],
-            ["concat", "-", ["get", "subclass"]],
-            ""
-          ],
-          ["get", "style"]
-        ],
+        "icon-image": "amenity⬤",
         "text-anchor": "top",
         "text-field": "{name:latin}\n{name:nonlatin}",
         "text-font": ["Noto Sans Regular"],
@@ -3431,50 +3102,7 @@
         "text-optional": true
       },
       "paint": {
-        "text-color": [
-          "let",
-          "style",
-          ["get", "style"],
-          "superclass",
-          ["get", "superclass"],
-          [
-            "match",
-            ["var", "style"],
-            "•",
-            "#666",
-            [
-              "match",
-              ["var", "superclass"],
-              "amenity",
-              "#2a62ac",
-              "catering",
-              "#f09007",
-              "culture",
-              "#76009e",
-              "hosting",
-              "#99163a",
-              "leisure",
-              "#00a757",
-              "local_shop",
-              "#00a0c4",
-              "mobility",
-              "#3b74b9",
-              "products",
-              "#f25c05",
-              "public_landmark",
-              "#1d1d1b",
-              "remarkable",
-              "#e50980",
-              "safety",
-              "#e42224",
-              "services",
-              "#2a62ac",
-              "shopping",
-              "#808080",
-              "#666"
-            ]
-          ]
-        ],
+        "text-color": "#666",
         "text-halo-blur": 0.5,
         "text-halo-color": "#ffffff",
         "text-halo-width": 1
