@@ -6721,13 +6721,6 @@
       "filter": [
         "all",
         [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "Point"
-        ],
-        [
           ">=",
           [
             "get",
@@ -6859,13 +6852,6 @@
       "minzoom": 14,
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "Point"
-        ],
         [
           "<=",
           [
@@ -7005,13 +6991,6 @@
       "minzoom": 12,
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "Point"
-        ],
         [
           "<=",
           [
@@ -7344,6 +7323,7 @@
       "paint": {
         "text-color": "#765",
         "text-halo-blur": 0.5,
+        "text-halo-color": "#fff",
         "text-halo-width": 1
       }
     },
@@ -7383,9 +7363,7 @@
         }
       },
       "paint": {
-        "text-color": "#765",
-        "text-halo-blur": 0.5,
-        "text-halo-width": 1
+        "text-color": "#765"
       }
     },
     {
@@ -7666,8 +7644,8 @@
       },
       "paint": {
         "text-color": "#765",
-        "text-halo-blur": 0.5,
-        "text-halo-width": 1
+        "text-halo-color": "rgba(255,255,255,0.8)",
+        "text-halo-width": 1.2
       }
     },
     {
@@ -7871,13 +7849,6 @@
       "filter": [
         "all",
         [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "Point"
-        ],
-        [
           ">=",
           [
             "get",
@@ -8051,13 +8022,6 @@
       "minzoom": 14,
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "Point"
-        ],
         [
           "<=",
           [
@@ -8239,13 +8203,6 @@
       "minzoom": 12,
       "filter": [
         "all",
-        [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "Point"
-        ],
         [
           "<=",
           [
