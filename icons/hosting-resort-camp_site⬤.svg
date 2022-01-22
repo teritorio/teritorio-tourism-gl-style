@@ -60,8 +60,8 @@
        cx="15"
        cy="15"
        r="14.5" />
-<g transform="translate(7,8)"><g id="surface1">
-<path style=" stroke:none;fill-rule:nonzero;fill:#FFFFFF;fill-opacity:1;" d="M 13.894531 12.984375 L 16 12.984375 L 16 14 L 0 14 L 0 12.984375 L 2.105469 12.984375 L 8 0 Z M 8 6.582031 L 5.050781 12.984375 L 10.945312 12.984375 Z M 8 6.582031 "/>
+<g transform="translate(6,8)"><g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:#FFFFFF;fill-opacity:1;" d="M 14.761719 13.363281 L 17 13.363281 L 17 14.410156 L 0 14.410156 L 0 13.363281 L 2.238281 13.363281 L 8.5 0 Z M 8.5 6.773438 L 5.363281 13.363281 L 11.628906 13.363281 Z M 8.5 6.773438 "/>
 </g>
 </g>
 </svg>

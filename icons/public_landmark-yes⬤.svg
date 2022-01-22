@@ -61,7 +61,7 @@
        cy="15"
        r="14.5" />
 <g transform="translate(6,9)"><g id="surface1">
-<path style=" stroke:none;fill-rule:nonzero;fill:#FFFFFF;fill-opacity:1;" d="M 16.984375 10.996094 L 0 10.996094 L 0.015625 0.00390625 L 8.578125 4.390625 L 17 0.00390625 Z M 16.984375 10.996094 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:#FFFFFF;fill-opacity:1;" d="M 16.984375 10.617188 L 0 10.617188 L 0.015625 0 L 8.578125 4.238281 L 17 0 Z M 16.984375 10.617188 "/>
 </g>
 </g>
 </svg>
