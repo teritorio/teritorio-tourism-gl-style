@@ -2382,7 +2382,7 @@
         [
           "==",
           "class",
-          "minor_road"
+          "minor"
         ]
       ],
       "layout": {
