@@ -7796,25 +7796,35 @@
       "source-layer": "mountain_peak",
       "minzoom": 9,
       "filter": [
-        "<=",
+        "all",
         [
-          "get",
-          "rank"
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
         ],
         [
-          "interpolate",
+          "<=",
           [
-            "linear"
+            "get",
+            "rank"
           ],
           [
-            "zoom"
-          ],
-          7,
-          1,
-          14,
-          1,
-          15,
-          999
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "zoom"
+            ],
+            7,
+            1,
+            14,
+            1,
+            15,
+            999
+          ]
         ]
       ],
       "layout": {
