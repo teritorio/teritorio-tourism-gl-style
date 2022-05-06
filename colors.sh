@@ -4,7 +4,7 @@ set -e
 
 declare -A colors
 colors['products']='#F25C05'
-colors['convenience']='#00a0a4'
+colors['local_shop']='#00a0a4'
 colors['services']='#2a62ac'
 colors['safety']='#e42224'
 colors['mobility']='#008ecf'
