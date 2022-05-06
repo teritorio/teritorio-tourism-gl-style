@@ -60,6 +60,6 @@
        cx="15"
        cy="15"
        r="14.5" />
-<g transform="translate(6,11)"><path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 5.050781 0 L 17 0 L 17 1.773438 L 5.050781 1.773438 Z M 0 5.050781 L 11.949219 5.050781 L 11.949219 6.824219 L 0 6.824219 Z M 0 5.050781 "/>
+<g transform="translate(6.5,11.5)"><path fill-rule="nonzero" fill="#FFFFFF" fill-opacity="1" d="M 5.050781 0 L 17 0 L 17 1.773438 L 5.050781 1.773438 Z M 0 5.050781 L 11.949219 5.050781 L 11.949219 6.824219 L 0 6.824219 Z M 0 5.050781 "/>
 </g>
 </svg>
