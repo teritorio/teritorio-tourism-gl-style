@@ -6168,7 +6168,7 @@
         "mapbox:group": "1444849345966.4436"
       },
       "source": "openmaptiles",
-      "source-layer": "route",
+      "source-layer": "route_bicycle_hiking",
       "filter": [
         "all",
         [
@@ -6216,7 +6216,7 @@
         "mapbox:group": "1444849345966.4436"
       },
       "source": "openmaptiles",
-      "source-layer": "route",
+      "source-layer": "route_bicycle_hiking",
       "filter": [
         "all",
         [
